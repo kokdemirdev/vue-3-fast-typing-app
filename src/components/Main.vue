@@ -51,7 +51,7 @@ export default {
       isTrue: true,
       trueCount: 0,
       falseCount: 0,
-      timer: 5,
+      timer: 10,
       interval: false,
       isRunning: false,
       isFinish: false,
@@ -97,9 +97,11 @@ export default {
     newGame() {
       this.getWords()
       this.isFinish = false
-      this.time = 60
+      this.timer = 10
       this.isTrue = true
       this.isRunning = false
+      this.trueCount = 0
+      this.falseCount = 0
     },
     getWords() {
       this.words = this.wordList.sort(() => Math.random() - 0.5).splice(0, 300)
